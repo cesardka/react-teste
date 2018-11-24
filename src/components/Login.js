@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 // import './App.css';
-// const cadastro = 'http://api-navetest.herokuapp.com/v1/users/signup'
-// const cadastro = 'http://api-navetest.herokuapp.com/v1/users?ranking=true'
 const login_URL = 'http://api-navetest.herokuapp.com/v1/users/login'
 
 class Login extends Component {

@@ -20,8 +20,14 @@ class ListAllUsers extends Component {
     //   password: this.pass.value
     // }
     // console.log(form);
-    
-    Axios.get(list_URL)
+  
+    const config = {
+      headers: {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiaWQiOiI0ZmU3ZWMwZi1mNTcwLTQ1MDYtOTliNi03NTljYzQxNmYyNGYiLCJlbWFpbCI6ImNlQGNlM3MuY29tIn0sImlhdCI6MTU0MzA5MDU3OX0.QYznP33sgZKB1G1U3gqlCat1iYfYVmDnfwDSwfQ6dDk"
+      }
+    }
+
+    Axios.get(list_URL, config)
     .then(data=>console.log(data))
     .catch(err=>console.log(err))
   }

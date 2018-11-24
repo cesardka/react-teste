@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 // import './App.css';
-// const cadastro = 'http://api-navetest.herokuapp.com/v1/users/signup'
-const cadastro = 'http://api-navetest.herokuapp.com/v1/users?ranking=true'
+const signup_URL = 'http://api-navetest.herokuapp.com/v1/users/signup'
 
 class SignUp extends Component {
 
@@ -22,7 +21,7 @@ class SignUp extends Component {
       password: this.pass.value,
       email: this.email.value
     }
-    Axios.get(cadastro, form)
+    Axios.get(signup_URL, form)
     .then(data=>console.log(data))
     .catch(err=>console.log(err))    
   }
